@@ -9,25 +9,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
-    overflow: hidden;
 }
 
 .container {
     background: rgba(0, 0, 0, 0.85);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     width: 90%;
-    max-width: 600px;
+    max-width: 650px;
+    animation: fadeIn 1s ease-in-out;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     color: #00bcd4;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 header p {
@@ -35,6 +41,7 @@ header p {
     font-size: 1.1rem;
     color: #cfd8dc;
     line-height: 1.6;
+    margin-top: 10px;
 }
 
 .social-buttons {
@@ -42,27 +49,31 @@ header p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .btn {
     text-decoration: none;
     font-size: 1.1rem;
     color: #fff;
-    padding: 15px 25px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    padding: 14px 24px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
-    border: 2px solid transparent;
+    border: none;
+    font-weight: 600;
+    flex: 1 1 200px;
+    justify-content: center;
+    min-width: 150px;
 }
 
 .btn i {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 .btn::before {
@@ -82,9 +93,8 @@ header p {
 }
 
 .btn:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .facebook { background: #4267B2; }
@@ -92,15 +102,53 @@ header p {
 .instagram { background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); }
 .linkedin { background: #0077b5; }
 .youtube { background: #ff0000; }
-.NGL {
+
+.ngl {
     background: linear-gradient(45deg, #ff5e00, #ff8800);
-    color: #fff;
     text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 footer {
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 0.9rem;
     color: #b0bec5;
+}
+
+/* 🔁 MEDIA QUERIES PARA HACERLO RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+        gap: 8px;
+        flex: 1 1 100%;
+    }
+
+    .btn i {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding: 10px 16px;
+    }
 }
