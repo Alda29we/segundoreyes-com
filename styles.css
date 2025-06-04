@@ -14,32 +14,27 @@ body {
     overflow: hidden;
 }
 
-@keyframes backgroundAnimation {
-    0% { background: linear-gradient(135deg, #1f1f1f, #3d3d3d); }
-    50% { background: linear-gradient(135deg, #0d47a1, #311b92); }
-    100% { background: linear-gradient(135deg, #1f1f1f, #3d3d3d); }
-}
-
 .container {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
     width: 90%;
     max-width: 600px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: #00bcd4;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 header p {
     margin: 0;
-    font-size: 1.2rem;
-    color: #b0bec5;
+    font-size: 1.1rem;
+    color: #cfd8dc;
+    line-height: 1.6;
 }
 
 .social-buttons {
@@ -47,22 +42,23 @@ header p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .btn {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #fff;
     padding: 15px 25px;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
+    border: 2px solid transparent;
 }
 
 .btn i {
@@ -86,19 +82,25 @@ header p {
 }
 
 .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .facebook { background: #4267B2; }
 .twitter { background: #1DA1F2; }
 .instagram { background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); }
 .linkedin { background: #0077b5; }
-youtube { background: #ff0000; }
-.NGL { background: #ff5e00; }
+.youtube { background: #ff0000; }
+.NGL {
+    background: linear-gradient(45deg, #ff5e00, #ff8800);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 footer {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 0.9rem;
     color: #b0bec5;
 }
